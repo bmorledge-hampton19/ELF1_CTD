@@ -190,7 +190,7 @@ foreach my $chr (sort keys %chromosomes)
                                 my $repair_plus_cpds = 0;
                                 my $zero_minus_cpds = 0;
                                 my $repair_minus_cpds = 0;
-                                for ( my $j = $start; $j <= $end; $j++ )
+                                for ( my $j = $start; $j < $end; $j++ )
                                 {
                                         if ( exists $zeroplusreads{$j} )
                                         {
@@ -396,7 +396,7 @@ foreach my $chr (sort keys %chromosomes)
                                 my $repair_plus_cpds = 0;
                                 my $zero_minus_cpds = 0;
                                 my $repair_minus_cpds = 0;
-                                for ( my $j = $start; $j <= $end; $j++ )
+                                for ( my $j = $start; $j < $end; $j++ )
                                 {
                                         if ( exists $zeroplusreads{$j} )
                                         {

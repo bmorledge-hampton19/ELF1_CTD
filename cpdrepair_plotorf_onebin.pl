@@ -41,7 +41,7 @@ my %trxstart = $genes->get_tss();
 my %trxend = $genes->get_tts();
 my %strand = $genes->get_strand();
 
-my $interval = 500; # size of flanking interval bins
+my $interval = 501; # size of flanking interval bins
 my $flank_offset = $numflankbins * $interval;
 
 #print header
@@ -190,7 +190,7 @@ foreach my $chr (sort keys %chromosomes)
                                 my $repair_plus_cpds = 0;
                                 my $zero_minus_cpds = 0;
                                 my $repair_minus_cpds = 0;
-                                for ( my $j = $start; $j <= $end; $j++ )
+                                for ( my $j = $start; $j < $end; $j++ )
                                 {
                                         if ( exists $zeroplusreads{$j} )
                                         {
@@ -396,7 +396,7 @@ foreach my $chr (sort keys %chromosomes)
                                 my $repair_plus_cpds = 0;
                                 my $zero_minus_cpds = 0;
                                 my $repair_minus_cpds = 0;
-                                for ( my $j = $start; $j <= $end; $j++ )
+                                for ( my $j = $start; $j < $end; $j++ )
                                 {
                                         if ( exists $zeroplusreads{$j} )
                                         {
